@@ -1,0 +1,355 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "poppins", sans-serif;;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: whitesmoke;
+}
+
+header  {
+	background-color: #90EE90;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 15px;
+}
+
+nav {
+	display: flex;
+	gap: 20px;
+	color: white;
+}
+
+nav d {
+	text-decoration: none;
+	color: black;
+
+}
+nav a:hover {
+	color: white;
+}
+/* COLOR DE TEXTOS */
+h2 {
+	color: black;
+}
+h1 {
+	color: white;
+}
+.rojocolr{
+	color:red;
+}
+.verdecolr{
+	color:darkgreen;
+}
+
+/*---------------------*/
+/* ESTILO TEXTOS */
+.parrafos{
+	font-style: italic;
+	font-size: 20px;
+	height: 21px;
+
+}
+/*--------------------*/
+.timeline{
+	position: relative;
+	max-width: 1200px;
+	margin: 100px auto;
+}
+  
+.container{
+	padding: 10px 50px;
+	position: relative;
+	width: 50%;
+	background: green;
+	border-radius: 10px;
+}
+
+.text-box{
+	padding: 20px 30px;
+	background: #fff;
+	position: relative;
+	border-radius: 6px;
+	font-size: 15px;
+}
+
+.left-container{
+	left: 0;
+}
+
+.right-container{
+	left: 50%;
+}
+.container img{
+	position: relative;
+	width: 250px;
+	border-radius: 10px;
+	right: -20px;
+	top: -25px;
+	z-index: 10;
+}
+
+.intro-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-radius: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.intro-container p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+/*HEADER DECORACION DEGRADADO*/
+.mi-header {
+  background: linear-gradient(to right, green, lightgray, red);
+  padding: 10px;
+ 
+}
+
+/*--PERSONAJES--*/
+/* Sección completa con fondo gris */
+.personajes-section {
+    background-color: #C8C8C8;
+    padding: 4rem 2rem;
+    width: 100%;
+}
+
+
+/* Cada fila de personaje */
+.personaje-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Tarjeta de texto */
+.personaje-text {
+    flex: 1;
+    max-width: 450px;
+    background: #E8E8E8;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.personaje-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2C3E50;
+    margin-bottom: 0.5rem;
+}
+
+.personaje-text .alias {
+    display: block;
+    font-style: italic;
+    color: #CE1126;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.personaje-text p {
+    font-size: 0.95rem;
+    color: #2C3E50;
+    line-height: 1.7;
+}
+
+/* Contenedor de imagen */
+.personaje-img {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.personaje-img img {
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    border: 3px solid rgba(255,255,255,0.5);
+}
+
+.personaje-img .img-label {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #2C3E50;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .personaje-row,
+    .personaje-row.reverse {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .personaje-text {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .personaje-img {
+        flex: 0 0 auto;
+    }
+    
+    .personaje-img img {
+        max-width: 250px;
+        height: 300px;
+    }
+}
+
+
+/* Hace que el body ocupe toda la altura */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Convierte el body en flex container */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima = 100% de la ventana */
+}
+
+/* El contenido principal crece para llenar el espacio */
+main, .contenido-principal {
+    flex: 1; /* Esto empuja el footer hacia abajo */
+}
+
+.footer-simple {
+    background-color: #006847;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: auto; /* Esto empuja el footer al fondo */
+}
+
+.footer-simple strong {
+    color: #FFD700;
+}
+
+/* Contenido principal */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    text-align: center;
+    color: #2C3E50;
+}
+
+/* Tarjetas simples */
+.dato {
+    background: #f5f5f5;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.dato h3 {
+    color: #006847;
+    margin-bottom: 0.5rem;
+}
+
+.dato p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Footer simple */
+footer {
+    background-color: #006847;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+footer strong {
+    color: #FFD700;
+}
+
+/* Barra de navegación horizontal */
+.navbar {
+    background-color: #006847; /* Verde patrio */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Página activa (la que estás viendo) */
+.nav-links a.active {
+    background-color: #CE1126; /* Rojo patrio */
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
