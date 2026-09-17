@@ -6,12 +6,13 @@
 	<title>personajes</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
-	<header class="mi-header">
-		<h1>¡Viva México!</h1>
-		<h1><span class="verdecolr">Mes</span> Patrio <span class="rojocolr"> SEPTIEMBRE</span></h1>
-		<nav class="navbar">
-    <ul class="nav-links">
+<body> <!-- Cuerpo de la pagina-->
+	<header class="mi-header"> <!-- Header, es el encabezado en este caso le agregamos una clase la cual contiene una personalizacion en css -->
+		<h1>¡Viva México!</h1> <!-- Texto que se vera en el header -->
+		<h1><span class="verdecolr">Mes</span> Patrio <span class="rojocolr"> SEPTIEMBRE</span></h1> <!-- Texto que se vera en el header en este caso utilizo span, para poder agregar ciertas clases a distintas palabras dentro del texto, las clases estan siendo utilizadas para cambiar el color de las letras -->
+		<nav>
+			<nav class="navbar"> <!-- Esta seria la clase de la brra de navegacion -->
+    <ul class="nav-links"> <!-- En este apartado agregamos los links a las distintas secciones (Paginas html) que tenemos -->
         <li><a href="index.html" >Resumen</a></li>
         <li><a href="fechas.html">Fechas</a></li>
         <li><a href="personajes.html"class="active">Personajes</a></li>
@@ -19,71 +20,71 @@
     </ul>
 </nav>
 	</header>
-	<section class="personajes-section">
+	<section class="personajes-section"> <!-- Inicia la seccion de personajes -->
     
-    <div class="personaje-row">
-        <div class="personaje-text">
-            <h3>Miguel Hidalgo y Costilla</h3>
-            <span class="alias">"El Padre de la Patria"</span>
-            <p>Sacerdote y militar que inició el movimiento independentista aboliendo la esclavitud en sus primeros decretos.</p>
+    <div class="personaje-row"> <!-- Esta clase es la que alista los personaje en fila -->
+        <div class="personaje-text"> <!-- Clase en la cual se incluye los textos -->
+            <h3>Miguel Hidalgo y Costilla</h3> <!-- Nombre del personaje-->
+            <span class="alias">"El Padre de la Patria"</span> <!-- Se utiliza la class alias para agregar un susbtitulo con texto de color rojo -->
+            <p>Sacerdote y militar que inició el movimiento independentista aboliendo la esclavitud en sus primeros decretos.</p> <!-- Parrafo con la informacion del personaje -->
         </div>
-        <div class="personaje-img">
-            <img src="imagenes/MH.png">
-            <span class="img-label">Miguel Hidalgo y Costilla</span>
-        </div>
-    </div>
-
-    <div class="personaje-row reverse">
-        <div class="personaje-img">
-            <img src="imagenes/JO.jpg">
-            <span class="img-label">Josefa Ortiz de Domínguez</span>
-        </div>
-        <div class="personaje-text">
-            <h3>Josefa Ortiz de Domínguez</h3>
-            <span class="alias">"La Corregidora"</span>
-            <p>Pieza clave de la Conspiración de Querétaro; alertó a los insurgentes de que la conspiración había sido descubierta, adelantando el inicio de la lucha.</p>
+        <div class="personaje-img"> <!-- Se llama la clase personaje-img en esta tenemos la personalizacion de la imagen -->
+            <img src="imagenes/MH.png"> <!-- Se inserta la imagen-->
+            <span class="img-label">Miguel Hidalgo y Costilla</span> <!-- Texto que aparecera debajo de la imagen -->
         </div>
     </div>
 
-    <div class="personaje-row">
-        <div class="personaje-text">
-            <h3>José María Morelos y Pavón</h3>
-            <span class="alias">Líder Militar</span>
-            <p>Líder militar que tomó el mando tras la muerte de Hidalgo. Autor de Los Sentimientos de la Nación, documento base de la constitución política mexicana.</p>
+    <div class="personaje-row reverse"> <!-- En este caso de agrega el reverse, debido a que es otra clase la cual hace el efecto de zig zag manteniendo en la posicion contraria (reversa) -->
+        <div class="personaje-img"> <!-- Se llama la clase personaje-img en esta tenemos la personalizacion de la imagen -->
+            <img src="imagenes/JO.jpg"> <!-- Se inserta la imagen-->
+            <span class="img-label">Josefa Ortiz de Domínguez</span> <!-- Texto que aparecera debajo de la imagen -->
         </div>
-        <div class="personaje-img">
-            <img src="imagenes/JM.png">
-            <span class="img-label">José María Morelos y Pavón</span>
-        </div>
-    </div>
-
-    <div class="personaje-row reverse">
-        <div class="personaje-img">
-            <img src="imagenes/IA.jpg">
-            <span class="img-label">Ignacio Allende</span>
-        </div>
-        <div class="personaje-text">
-            <h3>Ignacio Allende</h3>
-            <span class="alias">Capitán Insurgente</span>
-            <p>Capitán del ejército realista que se unió a la causa insurgente, aportando conocimiento táctico y militar a las primeras tropas.</p>
+        <div class="personaje-text"> <!-- Clase en la cual se incluye los textos -->
+            <h3>Josefa Ortiz de Domínguez</h3> <h3>Miguel Hidalgo y Costilla</h3> <!-- Nombre del personaje-->
+            <span class="alias">"La Corregidora"</span> <!-- Se utiliza la class alias para agregar un susbtitulo con texto de color rojo -->
+            <p>Pieza clave de la Conspiración de Querétaro; alertó a los insurgentes de que la conspiración había sido descubierta, adelantando el inicio de la lucha.</p> <!-- Parrafo con la informacion del personaje -->
         </div>
     </div>
 
-    <div class="personaje-row">
-        <div class="personaje-text">
-            <h3>Vicente Guerrero</h3>
-            <span class="alias">General Insurgente</span>
-            <p>General insurgente que mantuvo viva la resistencia en el sur durante los años más difíciles y pactó la paz final con el Abrazo de Acatempan.</p>
+    <div class="personaje-row"> <!-- Clase que alisa en fila "personaje"-->
+        <div class="personaje-text"> <!-- Clase en la cual se incluye los textos -->
+            <h3>José María Morelos y Pavón</h3> <!-- Nombre del personaje-->
+            <span class="alias">Líder Militar</span>  <!-- Se utiliza la class alias para agregar un susbtitulo con texto de color rojo -->
+            <p>Líder militar que tomó el mando tras la muerte de Hidalgo. Autor de Los Sentimientos de la Nación, documento base de la constitución política mexicana.</p>  <!-- Parrafo con la informacion del personaje -->
         </div>
-        <div class="personaje-img">
-            <img src="imagenes/VG.png">
-            <span class="img-label">Vicente Guerrero</span>
+        <div class="personaje-img"> <!-- Se llama la clase personaje-img en esta tenemos la personalizacion de la imagen -->
+            <img src="imagenes/JM.png"> <!-- Se inserta la imagen-->
+            <span class="img-label">José María Morelos y Pavón</span> <!-- Texto que aparecera debajo de la imagen -->
+        </div>
+    </div>
+
+    <div class="personaje-row reverse"> <!-- Clase invertida row en reversa -->
+        <div class="personaje-img"> <!-- Se llama la clase personaje-img en esta tenemos la personalizacion de la imagen -->
+            <img src="imagenes/IA.jpg"> <!-- Se inserta la imagen-->
+            <span class="img-label">Ignacio Allende</span> <!-- Texto que aparecera debajo de la imagen -->
+        </div>
+        <div class="personaje-text"> <!-- Clase en la cual se incluye los textos -->
+            <h3>Ignacio Allende</h3> <!-- Nombre del personaje-->
+            <span class="alias">Capitán Insurgente</span> <!-- Se utiliza la class alias para agregar un susbtitulo con texto de color rojo -->
+            <p>Capitán del ejército realista que se unió a la causa insurgente, aportando conocimiento táctico y militar a las primeras tropas.</p> <!-- Parrafo con la informacion del personaje -->
+        </div>
+    </div>
+
+    <div class="personaje-row"> <!-- Clase que alisa en fila "personaje"-->
+        <div class="personaje-text"> <!-- Clase en la cual se incluye los textos -->
+            <h3>Vicente Guerrero</h3> <!-- Nombre del personaje-->
+            <span class="alias">General Insurgente</span> <!-- Se utiliza la class alias para agregar un susbtitulo con texto de color rojo -->
+            <p>General insurgente que mantuvo viva la resistencia en el sur durante los años más difíciles y pactó la paz final con el Abrazo de Acatempan.</p> <!-- Parrafo con la informacion del personaje -->
+        </div>
+        <div class="personaje-img"> <!-- Se llama la clase personaje-img en esta tenemos la personalizacion de la imagen -->
+            <img src="imagenes/VG.png">  <!-- Se inserta la imagen-->
+            <span class="img-label">Vicente Guerrero</span> <!-- Texto que aparecera debajo de la imagen -->
         </div>
     </div>
 </section>
 
-	<footer class="footer-simple">
-    <p><strong>ALUMNO:</strong> LOPEZ FAVELA VICTOR HUGO | <strong>NO. DE CONTROL:</strong> 0860 | <strong>GRUPO:</strong> 5-J</p>
+	<footer class="footer-simple"> <!-- Footer de la pagina en clase -->
+    <p><strong>ALUMNO:</strong> LOPEZ FAVELA VICTOR HUGO | <strong>NO. DE CONTROL:</strong> 0860 | <strong>GRUPO:</strong> 5-J</p> <!-- DATOS-->
 </footer>
 </body>
 </html>
