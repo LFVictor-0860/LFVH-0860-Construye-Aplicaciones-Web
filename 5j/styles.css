@@ -335,21 +335,7 @@ footer strong {
     background-color: rgba(255,255,255,0.2);
 }
 
-/* Página activa (la que estás viendo) */
+/* Página activa */
 .nav-links a.active {
     background-color: #CE1126; /* Rojo patrio */
-}
-
-/* Responsive para móvil */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 0.8rem;
-        padding: 1rem;
-    }
-    
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 }
