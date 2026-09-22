@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encabezados HTML</title>
+</head>
+
+<body>
+   
+    <h1>Titulo 1</h1>
+    <h2>Titulo 2</h2>
+    <h3>Titulo 3</h3>
+    <h4>Titulo 4</h4>
+    <h5>Titulo 5</h5>
+    <h6>Titulo 6</h6>
+    <h1>Estructura del HTML</h1>
+    <h2>HTML</h2>
+    <p>Envuelve todo el contenido de la pagina</p>
+    <h2>Head</h2>
+    <p>Contiene los metadatos del sitio web,
+        configuraciones y el titulo de la pestaña
+    </p>
+    <h2>Body</h2>
+    <p>Muestra los elementos visuales que ve el usuario</p>
+    <h2>Footer</h2>
+    <p>Muestra la informacion del autor de la pagina,
+        creditos, informacion relevante, etc.
+    </p>
+     <h1>Lenguaje de programacion</h1>
+    <p>En la actualidad se utilizan diferentes
+        lenguajes de programacion tanto para desarrollo
+        web, desarrollo movil, entranamiento de inteligencia
+        artificial, pero de los mas usados son
+        los siguientes:<br>
+        Dart<br>
+        Flutter<br>
+        Python<br>
+        Ruby<br>
+        Java<br>
+        TypeScript<br>
+        Entre otros.
+    </p>
+    <p><strong>Tipos de datos</strong> en MYSQL</p>
+<p><em>TEXTO</em>: Para almacenar texto yusamos cadenas de caracteres.
+Las cadenas se colocan entre comillas simples. Podemos almacenar digitos con
+los que no se realizan operaciones matematicas, por ejemplo, codigos de
+identificacion, numeros de documentos, numeros telefonicos. Tenemos los
+siguientes tipos: varchar, char y text.</p>
+<p><em>NUMEROS</em>: Existen variedad de tipos numericos para representar
+enteros, negativos, decimales. Para almacenar valores enteros, por ejemplo
+, en campos que hacen referencia a cantidades, precios, etc. usamos
+el tipo integer. Para almacenar valores con decimales utilizamos: float o
+decimal.</p>
+<p><em>FECHAS Y HORAS</em>: Para guardar fechas y horas dispones de varios
+tipos: date (fecha), datetime (fecha y hora), time (hora), year (año) y
+timestamp.</p>
+     <h2>Tipos de enlaces en HTML</h2>
+    <p><strong>Enlaces/Hipervinculos a otra pagina del
+         mismo sitio.
+    </strong></p>
+    <a href="1. Hola_mundo.html">1. Hola Mundo</a><br>
+    <a href="2. Encabezados.html" target="_self">
+        2. Encabezados</a><br>
+    <a href="3. Parrafos.html" target="_blank">
+        3. Parrafos</a><br>
+    <a href="4. Salto de linea.html" target="_parent">
+        4. Salto de linea</a><br>
+    <a href="5. Enfatizado.html" target="_top">
+        5. Enfatizado</a><br>
+    <p><strong>Enlaces/Hipervinculos a sitios externos
+    </strong></p>
+    <a href="https://www.google.com/">Google</a><br>
+    <a href="https://www.youtube.com/" target="_self">
+        YouTube</a><br>
+    <a href="https://www.facebook.com/" target="_blank">
+        FaceBook</a><br>
+    <a href="https://www.wikipedia.com/" target="_parent">
+        WikiPedia</a><br>
+    <a href="https://www.espanol.yahoo.com/" target="_top">
+        Yahoo!</a><br>
+     <h2>Imagenes en HTML</h2>
+    <h3>Locales</h3>
+    <img src="caritas.png" alt="Imagen de carita feliz">
+    <h3>Locales redismensionado</h3>
+    <img src="imagenes/carita.png" alt="" width="200" height="100">
+    <h3>Desde internet</h3>
+    <img src="https://st2.depositphotos.com/2172759/11751/v/950/depositphotos_117511772-stock-illustration-happy-face-isolated-on-white.jpg" 
+    width="200" height="200"
+    alt="">
+    <h3>Animaciones</h3>
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExejMydmVybzBiY3lkdWd1Nnp1MzJiMXA3Ymt3czE3NGp1NDZuZDg5YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tXL4FHPSnVJ0A/giphy.gif" 
+    width="200" height="200"
+    alt="">
+    <h1>Tipos de listas</h1>
+    <h2>Listas ordenadas</h2>
+    <p>Una lista ordenada es una serie de elementos los cuales 
+        tendran una numeracion de acuerdo al numeros de elementos.
+    </p>
+    <ol>
+        <li>Luna Arias </li>
+        <li>Franco Andrea</li>
+        <li>Granados Evelyn</li>
+    </ol>
+    <h2>Listas no ordenadas</h2>
+    <p>Las listas no ordenadas no utilizan ninguna numeracion delante 
+        de cada item sino un pequeño elemento grafico
+    </p>
+    <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Python</li>
+    </ul>
+    <h2>Lista de definiciones</h2>
+    <p>Se utiliza para asociar un termino y la definicion del mismo</p>
+    <dl>
+        <!-- Primer termino-->
+        <dt>C++</dt>
+        <!-- Definicion del primer termino-->
+        <dd>
+            Es un lenguaje de programacion, diseñado a mediados de los años
+            1980 como extension del lenguaje de programacion C.
+        </dd>
+        <!-- Segundo termino-->
+        <dt>Java</dt>
+        <!-- Definicion del segundo termino-->
+        <dd>
+            Es un lenguaje de programacion orientado a objetos desarrollado
+            por Sun Microsystem a principios de los 90.
+        </dd>
+        <!-- Tercer termino-->
+        <dt>JavaScript</dt>
+        <!-- Definicion del tercer termino-->
+        <dd>
+            Es un lenguaje interpretado, es decir que no requiere compilacion,
+            utilizado principalmente en paginas web, con una sintaxis similar
+            al lenguaje de programacion C.
+        </dd>
+    </dl>
+    <h2>Listas anidadas</h2>
+    <p>En HTML nos permite insertar una lista dentro de otra lista, se pueden
+        anidar diferentes tipos de lista de acuerdo al requerimiento
+    </p>
+    <ol>
+        <li>Argentina
+            <ul>
+                <li>Buenos aires</li>
+                <li>La plata</li>
+                <li>Mendoza</li>
+            </ul>
+        </li>
+        <li>España
+            <ul>
+                <li>Barcelona</li>
+                <li>Madrid</li>
+                <li>Sevilla</li>
+            </ul>
+        </li>
+        <li>Mexico
+            <ul>
+                <li>Chihuahua</li>
+                <li>Cd. Juarez</li>
+                <li>Hermosillo</li>
+            </ul>
+        </li>
+    </ol>
+    <p>El objetivo fundamental de las tablas en HTML sera
+        mostrar una serie de datos en forma ordenada,
+        organizado en filas y columnas
+    </p>
+    <p>Para la creacion de una tabla intervienen diferentes elementos:</p>
+    <dl>
+        <dt>Table</dt>
+        <dd>
+            Es la marca de comienzo de la tabla. Este elemento requiere
+            la marca de cierre.
+        </dd>
+        <dt>Tr</dt>
+        <dd>
+            Es la marca de comienzo de una fila. Esta marca debe estar
+            dentro del elemento table
+        </dd>
+        <dt>Td</dt>
+        <dd>
+            Es la marca de comeinzo de una celda. Esta marca debe estar
+            dentro del elemento tr
+        </dd>
+    </dl>
+    <h2>Ejemplo</h2>
+    <table border="1">
+        <tr>
+            <td>Ciudad de Mexico</td>
+            <td>9.2 millones</td>
+        </tr>
+        <tr>
+            <td>Guadalajara</td>
+            <td>4.1 millones</td>
+        </tr>
+        <tr>
+            <td>Monterrey</td>
+            <td>3.9 millones</td>
+        </tr>
+    </table>
+    <h2>Tabla con encabezado</h2>
+    <p>La caracteristicas de esta tabla es que se le agrega a las celdas 
+        el encabezado correspondiente, esto solo aplicaria a la primera
+        fila de la tabla con la etiqueta <em>th</em>, las demas filas
+        usarian la etiqueta <em>td</em> con normalidad.
+    </p>
+    <table border="1">
+        <tr>
+            <th>Ciudad</th>
+            <th>Cantidad de habitantes</th>
+        </tr>
+        <tr>
+            <td>Ciudad de Mexico</td>
+            <td>9.2 millones</td>
+        </tr>
+        <tr>
+            <td>Guadalajara</td>
+            <td>4.1 millones</td>
+        </tr>
+        <tr>
+            <td>Monterrey</td>
+            <td>3.9 millones</td>
+        </tr>
+    </table>
+    <h2>Tabla con titulo</h2>
+    <p>Para insertar un titulo a la tabla debemos incorporar el elemento caption 
+        inmediatamente despues de abrir la etiqueta <em>table</em>.
+    </p>
+    <table border="1">
+        <caption>Poblacion de las ciudades mas concurridas de Mexico</caption>
+        <tr>
+            <th>Ciudad</th>
+            <th>Cantidad de habitantes</th>
+        </tr>
+        <tr>
+            <td>Ciudad de Mexico</td>
+            <td>9.2 millones</td>
+        </tr>
+        <tr>
+            <td>Guadalajara</td>
+            <td>4.1 millones</td>
+        </tr>
+        <tr>
+            <td>Monterrey</td>
+            <td>3.9 millones</td>
+        </tr>
+    </table>
+</body>
+
+</html>
