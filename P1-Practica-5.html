@@ -1,1 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Horario 5J</title>
+<style>
+  * { box-sizing: border-box; }
+  body { background: #ffffff; font-family: Arial, Helvetica, sans-serif; padding: 20px; }
 
+  table { border-collapse: collapse; width: 780px; margin: 0 auto 10px auto; }
+  td, th { border: 1px solid #000; text-align: center; vertical-align: middle; }
+
+  /* ---------- TABLA 1: HORARIO ---------- */
+  .horario { border: 2px solid #000; }
+  .horario td, .horario th { padding: 4px 6px; font-size: 15px; color: #222; }
+  .banda   { background: #ececec; color: #2d9c9c; font-size: 26px; height: 44px; }
+  .dias th { background: #f4fafa; color: #2d9c9c; font-size: 16px; font-weight: normal; height: 30px; }
+  .icon    { width: 40px; color: #2d9c9c; font-size: 18px; }
+  .hora    { width: 68px; background: #f4fafa; color: #2d9c9c;
+             border-top: 1px dotted #000; border-bottom: 1px dotted #000; }
+  .libre   { background: #fffff0;
+             border-top: 1px dotted #000; border-bottom: 1px dotted #000; }
+  .slot td { height: 62px; }
+  .recreo  { background: #fdfdfd; color: #2d9c9c; height: 26px; }
+  .sep     { background: #ececec; height: 20px; }
+
+  /* Colores por materia */
+  .ch    { background: #ffff99; } /* Conciencia Histórica 2 */
+  .apli  { background: #b5b14d; } /* Aplicaciones de la administración */
+  .ing   { background: #8e8437; } /* Inglés 5 */
+  .prog1 { background: #ff8000; } /* Construye aplicaciones web */
+  .cneyt { background: #7cfc00; } /* Ciencias Naturales y Tecnología 5 */
+  .prog2 { background: #c0c0c0; } /* Implementa aplicaciones web */
+  .fs    { background: #a020f0; } /* Formación socioemocional 5 */
+  .tsdm  { background: #00a000; } /* Temas Selectos de Matemáticas 2 */
+
+  /* ---------- TABLA 2: PROFESORES ---------- */
+  .profes { border: 2px solid #000; }
+  .profes th { background: #fdfdfd; color: #2d9c9c; font-weight: normal;
+               font-size: 16px; height: 28px; border-bottom: 2px solid #000; }
+  .profes td { border-top: 1px dotted #000; border-bottom: 1px dotted #000;
+               font-size: 16px; text-align: left; padding: 6px 10px; }
+  .profes td.hs  { width: 52px; text-align: center; background: #fbfbf5; }
+  .profes td.nom { background: #fbfbf5; letter-spacing: .5px; }
+  .profes td.mat { width: 300px; }
+</style>
+</head>
+<body>
+
+<!-- ===== HORARIO DEL GRUPO 5J ===== -->
+<table class="horario">
+  <tr><th colspan="6" class="banda">5J</th></tr>
+  <tr class="dias">
+    <th class="icon">▦</th>
+    <th>Lunes</th><th>Martes</th><th>Miércoles</th><th>Jueves</th><th>Viernes</th>
+  </tr>
+
+  <tr class="slot">
+    <td class="hora">7:00<br>8:00</td>
+    <td class="libre"></td>
+    <td class="ch">5° CH 2<br>Juarez<br>AULA 38</td>
+    <td class="apli">5° Apli. Adm<br>Estrada<br>AULA 38</td>
+    <td class="apli">5° Apli. Adm<br>Estrada<br>AULA 38</td>
+    <td class="ing">5° Ingles 5<br>Terrazas<br>AULA 38</td>
+  </tr>
+
+  <tr class="slot">
+    <td class="hora">8:00<br>9:00</td>
+    <td class="libre"></td>
+    <td class="apli">5° Apli. Adm<br>Estrada<br>AULA 38</td>
+    <td class="ch">5° CH 2<br>Juarez<br>AULA 38</td>
+    <td class="ing">5° Ingles 5<br>Terrazas<br>AULA 38</td>
+    <td class="ch">5° CH 2<br>Juarez<br>AULA 38</td>
+  </tr>
+
+  <tr class="slot">
+    <td class="hora">9:00<br>10:00</td>
+    <td class="ing">5° Ingles 5<br>Terrazas<br>AULA 38</td>
+    <td class="prog1" rowspan="2">PROG M4S1<br>Meza<br>AULA 38</td>
+    <td class="prog1">PROG M4S1<br>Meza<br>AULA 38</td>
+    <td class="prog1" rowspan="2">PROG M4S1<br>Meza<br>AULA 38</td>
+    <td class="prog1" rowspan="2">PROG M4S1<br>Meza<br>AULA 38</td>
+  </tr>
+
+  <tr class="slot">
+    <td class="hora">10:00<br>10:50</td>
+    <td class="cneyt">5° CNEyT 5<br>Reyes<br>AULA 38</td>
+    <td class="ing">5° Ingles 5<br>Terrazas<br>AULA 38</td>
+  </tr>
+
+  <tr>
+    <td class="hora"></td>
+    <td colspan="5" class="recreo">recreo</td>
+  </tr>
+
+  <tr class="slot">
+    <td class="hora">11:10<br>12:00</td>
+    <td class="prog2">PROG M4S2<br>Gonzales A<br>AULA 38</td>
+    <td class="prog2">PROG M4S2<br>Gonzales A<br>AULA 38</td>
+    <td class="cneyt" rowspan="2">5° CNEyT 5<br>Reyes<br>AULA 38</td>
+    <td class="prog2" rowspan="2">PROG M4S2<br>Gonzales A<br>AULA 38</td>
+    <td class="cneyt">5° CNEyT 5<br>Reyes<br>AULA 38</td>
+  </tr>
+
+  <tr class="slot">
+    <td class="hora">12:00<br>13:00</td>
+    <td class="fs">5° FS<br>Meza<br>AULA 38</td>
+    <td class="ing">5° Ingles 5<br>Terrazas<br>AULA 38</td>
+    <td class="prog2">PROG M4S2<br>Gonzales A<br>AULA 38</td>
+  </tr>
+
+  <tr class="slot">
+    <td class="hora">13:00<br>14:00</td>
+    <td class="tsdm">5° TSdM 2<br>Macias<br>AULA 38</td>
+    <td class="tsdm">5° TSdM 2<br>Macias<br>AULA 38</td>
+    <td class="tsdm">5° TSdM 2<br>Macias<br>AULA 38</td>
+    <td class="tsdm">5° TSdM 2<br>Macias<br>AULA 38</td>
+    <td class="tsdm">5° TSdM 2<br>Macias<br>AULA 38</td>
+  </tr>
+
+  <tr><td colspan="6" class="sep"></td></tr>
+</table>
+
+<!-- ===== TABLA DE PROFESORES Y MATERIAS ===== -->
+<table class="profes">
+  <tr>
+    <th class="hs">n°hs.</th>
+    <th>Profesores</th>
+    <th>Materia</th>
+  </tr>
+  <tr>
+    <td class="hs">3</td>
+    <td class="nom">ESTRADA ORTEGA MARIA ANTONIETA</td>
+    <td class="mat apli">5° Aplicaciones de la administracion</td>
+  </tr>
+  <tr>
+    <td class="hs">5</td>
+    <td class="nom">GONZALEZ AGUILERA LIDIA VIRIDIANA</td>
+    <td class="mat prog2">Implementa aplicaciones web</td>
+  </tr>
+  <tr>
+    <td class="hs">3</td>
+    <td class="nom">JUÁREZ LOZOYA GUILLERMO</td>
+    <td class="mat ch">Conciencia Historica 2 Mexico durante el expansion</td>
+  </tr>
+  <tr>
+    <td class="hs">5</td>
+    <td class="nom">MACIAS MARIO</td>
+    <td class="mat tsdm">Temas Selectos de Matematicas 2</td>
+  </tr>
+  <tr>
+    <td class="hs">7</td>
+    <td class="nom">MEZA DÌAZ LETICIA</td>
+    <td class="mat prog1">Construye aplicaciones web</td>
+  </tr>
+  <tr>
+    <td class="hs">1</td>
+    <td class="nom">MEZA DÌAZ LETICIA</td>
+    <td class="mat fs">Formacion socioemocional 5</td>
+  </tr>
+  <tr>
+    <td class="hs">4</td>
+    <td class="nom">REYES LUIS HOMERO</td>
+    <td class="mat cneyt">Ciencias Naturales, Experimentales y Tecnologia 5</td>
+  </tr>
+  <tr>
+    <td class="hs">5</td>
+    <td class="nom">TERRAZAS CERVANTES GRISELDA</td>
+    <td class="mat ing">Ingles 5</td>
+  </tr>
+</table>
+
+</body>
+</html>
