@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone - Apple</title>
+    <style>
+        header {
+            background-color: lightgray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+        
+        nav {
+            background-color: #f5f5f5;
+            padding: 10px 30px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        nav a:hover {
+            color: #0071e3;
+        }
+        
+        main {
+            padding: 20px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            background-color: lightgray;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        /* Formulario básico para iPhone */
+        .form-iphone {
+            max-width: 500px;
+            margin: 30px auto;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .form-iphone label {
+            font-weight: bold;
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .form-iphone input, 
+        .form-iphone select, 
+        .form-iphone textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-iphone button {
+            background-color: #0071e3; /* Azul estilo Apple */
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            cursor: pointer;
+            border-radius: 15px;
+            margin: 5px;
+        }
+
+        .form-iphone button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>iPhone</h1>
+        <p>Diseñado por Victor Hugo Lopez Favela 5-J</p>
+    </header>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav>
+        <ul>
+            <li><a href="#acerca">Acerca de</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#modelos">Modelos</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#developer">Developer</a></li>
+        </ul>
+    </nav>
+
+    <!-- CUERPO PRINCIPAL -->
+    <main>
+
+        <!-- Seccion: Acerca de -->
+        <section id="acerca">
+            <h2>Acerca de iPhone</h2>
+            <p>iPhone es una linea de telefonos inteligentes de alta gama diseñada y comercializada por Apple Inc. Ejecuta el sistema operativo movil iOS, conocido hasta mediados de 2010 como "iPhone OS".</p>
+            <p>La principal novedad que introdujo el iPhone fue su interfaz fluida tactil basada en una pantalla tactil capacitiva, similar a la introducida el año anterior (2006) por el LG Prada, que no tuvo tanto impacto a nivel comercial.</p>
+        </section>
+
+        <!--Imagen del ultimo modelo -->
+        <section>
+            <h3>Imagen de diseño (último modelo)</h3>
+            <img src="i18.png" width="400" height="500" alt="iPhone último modelo">
+            <p><em>iPhone 18</em></p>
+        </section>
+
+        <!--Historia -->
+        <section id="historia">
+            <h2>Historia</h2>
+            <p>El iPhone fue presentado el 9 de enero de 2007 por Steve Jobs durante la Macworld Conference & Expo en San Francisco. El primer iPhone salió a la venta el 29 de junio de 2007 en Estados Unidos.</p>
+            
+            <h3>Línea de tiempo</h3>
+            <ul>
+                <li><strong>2007:</strong> Lanzamiento del primer iPhone</li>
+                <li><strong>2008:</strong> iPhone 3G y lanzamiento del App Store</li>
+                <li><strong>2010:</strong> iPhone 4 con pantalla Retina</li>
+                <li><strong>2014:</strong> iPhone 6 y 6 Plus con pantallas más grandes</li>
+                <li><strong>2017:</strong> iPhone X con diseño sin bordes y Face ID</li>
+                <li><strong>2020:</strong> iPhone 12 con conectividad 5G</li>
+                <li><strong>2023:</strong> iPhone 15 con puerto USB-C y chip A17 Pro</li>
+                <li><strong>2026:</strong> iPhone 18 con el iPhone Duo que incluye pantalla foldable doble, la primera en la linea</li>
+            </ul>
+        </section>
+
+        <!-- Sección: Modelos actuales -->
+        <section id="modelos">
+            <h2>Modelos Actuales</h2>
+            <table border="1" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Pantalla</th>
+                        <th>Chip</th>
+                        <th>Precio desde</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>iPhone 18</td>
+                        <td>6.1" OLED</td>
+                        <td>A16 Bionic</td>
+                        <td>$799 USD</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone Duo</td>
+                        <td>6.7" OLED</td>
+                        <td>A16 Bionic</td>
+                        <td>$899 USD</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 18 Pro</td>
+                        <td>6.1" OLED</td>
+                        <td>A17 Pro</td>
+                        <td>$999 USD</td>
+                    </tr>
+                    <tr>
+                        <td>iPhone 18 Pro Max</td>
+                        <td>6.7" OLED</td>
+                        <td>A17 Pro</td>
+                        <td>$1,199 USD</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección: Características -->
+        <section id="caracteristicas">
+            <h2>Características Principales</h2>
+            <ul>
+                <li><strong>Sistema operativo:</strong> iOS (actualmente iOS 17)</li>
+                <li><strong>Procesador:</strong> Chips Apple Silicon (A-series)</li>
+                <li><strong>Cámara:</strong> Sistema de cámara dual/triple con modo retrato y Night Mode</li>
+                <li><strong>Seguridad:</strong> Face ID o Touch ID</li>
+                <li><strong>Conectividad:</strong> 5G, Wi-Fi 6E, Bluetooth 5.3</li>
+                <li><strong>Resistencia:</strong> Certificación IP68 (resistente al agua)</li>
+                <li><strong>Batería:</strong> Hasta 29 horas de reproducción de video</li>
+                <li><strong>Almacenamiento:</strong> Desde 128GB hasta 1TB</li>
+            </ul>
+
+            <h3>Sistema Operativo iOS</h3>
+            <p>iOS es el sistema operativo móvil desarrollado por Apple exclusivamente para sus dispositivos. Incluye características como:</p>
+            <ul>
+                <li>App Store con millones de aplicaciones</li>
+                <li>Siri, asistente virtual inteligente</li>
+                <li>Apple Pay para pagos móviles</li>
+                <li>iCloud para almacenamiento en la nube</li>
+                <li>Integración completa con el ecosistema Apple (Mac, iPad, Apple Watch)</li>
+            </ul>
+        </section>
+
+        <!-- Sección: Developer -->
+        <section id="developer">
+            <h2>Developer</h2>
+            <p><strong>Empresa:</strong> Apple Inc.</p>
+            <p><strong>Fundador:</strong> Steve Jobs, Steve Wozniak y Ronald Wayne</p>
+            <p><strong>Fundación:</strong> 1 de abril de 1976</p>
+            <p><strong>Sede central:</strong> Cupertino, California, Estados Unidos</p>
+            <p><strong>CEO actual:</strong> Tim Cook</p>
+            <p><strong>Sitio web oficial:</strong> <a href="https://www.apple.com" target="_blank">www.apple.com</a></p>
+            
+            <h3>Apple Park</h3>
+            <p>La sede principal de Apple, conocida como Apple Park, es un campus corporativo ubicado en Cupertino, California. Fue diseñado por el arquitecto Norman Foster y completado en 2017. El edificio principal tiene forma de anillo y es uno de los edificios más grandes del mundo.</p>
+        </section>
+
+        <!-- Sección: Impacto en el mercado -->
+        <section>
+            <h2>Impacto en el Mercado</h2>
+            <p>iPhone ha revolucionado la industria de los teléfonos móviles y se ha convertido en uno de los productos más exitosos en la historia de la tecnología. Algunos datos destacados:</p>
+            <ul>
+                <li>Más de 2,300 millones de iPhones vendidos desde 2007</li>
+                <li>Apple es la empresa más valiosa del mundo</li>
+                <li>El App Store tiene más de 1.8 millones de aplicaciones</li>
+                <li>iPhone representa aproximadamente el 27% del mercado global de smartphones</li>
+            </ul>
+        </section>
+        
+        <section class="form-iphone">
+        <h2>Contacto y Soporte</h2>
+        <p>¿Tienes dudas sobre tu iPhone o necesitas ayuda? Envíanos un mensaje.</p>
+        
+        <form action="#" method="POST">
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="modelo">Tu modelo de iPhone:</label><br>
+            <select id="modelo" name="modelo">
+                <option value="iphone15">iPhone 18</option>
+                <option value="iphone14">iPhone 17</option>
+                <option value="iphone13">iPhone 16</option>
+                <option value="otro">Otro / No estoy seguro</option>
+            </select><br><br>
+
+            <label for="asunto">Asunto:</label><br>
+            <select id="asunto" name="asunto">
+                <option value="soporte">Soporte técnico</option>
+                <option value="ventas">Información de compra</option>
+                <option value="garantia">Dudas de garantía</option>
+                <option value="otro">Otro</option>
+            </select><br><br>
+
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Describe tu problema o duda..." required></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+        </form>
+    </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>iPhone - Apple Inc.</strong></p>
+        <p>Lopez Favela Victor Hugo, Num:0860</p>
+        <p> 
+            <a href="https://support.apple.com">Soporte</a>
+        </p>
+    </footer>
+
+</body>
+</html>
