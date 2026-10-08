@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - iPhone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <header>
+        <img src="tu-imagen-aqui.png" alt="Logo">
+        <h1>iPhone</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="modelos.html">Modelos</a></li>
+            <li><a href="caracteristicas.html">Características</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="form-iphone">
+            <h2>Contacto y Soporte</h2>
+            <p>¿Tienes dudas sobre tu iPhone o necesitas ayuda? Envíanos un mensaje.</p>
+            
+            <form action="#" method="POST">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="modelo">Tu modelo de iPhone:</label>
+                <select id="modelo" name="modelo">
+                    <option value="iphone15">iPhone 18</option>
+                    <option value="iphone14">iPhone 17</option>
+                    <option value="iphone13">iPhone 16</option>
+                    <option value="otro">Otro / No estoy seguro</option>
+                </select>
+
+                <label for="asunto">Asunto:</label>
+                <select id="asunto" name="asunto">
+                    <option value="soporte">Soporte técnico</option>
+                    <option value="ventas">Información de compra</option>
+                    <option value="garantia">Dudas de garantía</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Describe tu problema o duda..." required></textarea>
+
+                <div class="button-group">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>iPhone - Apple Inc.</strong></p>
+        <p>Lopez Favela Victor Hugo, Num:0860</p>
+        <p> 
+            <a href="https://support.apple.com">Soporte</a>
+        </p>
+    </footer>
+
+</body>
+</html>
