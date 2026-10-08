@@ -32,13 +32,22 @@
 
         header {
             background-color: var(--white);
-            padding: 20px 40px;
+            padding: 16px 40px;
             border-bottom: 1px solid var(--border-gray);
             position: sticky;
             top: 0;
             z-index: 100;
             backdrop-filter: saturate(180%) blur(20px);
             background-color: rgba(255, 255, 255, 0.72);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        header img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
         }
 
         header h1 {
@@ -372,7 +381,12 @@
         /* Responsive */
         @media (max-width: 768px) {
             header {
-                padding: 16px 20px;
+                padding: 12px 20px;
+                top: 64px;
+            }
+
+            header img {
+                height: 40px;
             }
 
             nav {
@@ -419,6 +433,7 @@
 
     <!-- ENCABEZADO -->
     <header>
+        <img src="tu-imagen-aqui.png" alt="Logo">
         <h1>iPhone</h1>
     </header>
 
