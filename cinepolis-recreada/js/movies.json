@@ -1,0 +1,27 @@
+[
+  {
+    "title": "La Odisea",
+    "type": "Estreno",
+    "url": "#movies"
+  },
+  {
+    "title": "Avengers: Doomsday",
+    "type": "Próximamente",
+    "url": "#movies"
+  },
+  {
+    "title": "Duna: Parte tres",
+    "type": "Próximamente",
+    "url": "#movies"
+  },
+  {
+    "title": "Resident Evil",
+    "type": "Próximamente",
+    "url": "#movies"
+  },
+  {
+    "title": "El diablo viste a la moda 2",
+    "type": "Estreno",
+    "url": "#movies"
+  }
+]

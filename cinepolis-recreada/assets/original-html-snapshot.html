@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-test-id="js-enabled-script">
+    function ios() {
+      let userAgent = window.navigator.userAgent.toLowerCase()
+      let safari = /safari/.test(userAgent)
+      let ios = /iphone|ipod|ipad/.test(userAgent) || (/macintosh/.test(userAgent) && window.navigator.maxTouchPoints > 0)
+
+      return ios && !safari
+    }
+
+    const loadingMessage = [
+      'Popping the popcorn',
+      'Starting the projectors',
+      'Contacting Hollywood',
+      'Negotiating Distribution Deals',
+      'Splicing the Film',
+      'Sweeping the Auditorium'
+    ]
+    function showDelayLoadMessage(attempt = 1) {
+      const loadDelayMessageElement = document.getElementById('indy-load-delay-message')
+
+      if (!loadDelayMessageElement) return
+
+      if (attempt === 1) {
+        loadDelayMessageElement.style.display = "block"
+      } else {
+        loadDelayMessageElement.children[0].textContent = loadingMessage[(attempt - 2) % loadingMessage.length]
+      }
+
+      setTimeout(() => {
+        showDelayLoadMessage(attempt + 1)
+      }, 5000)
+    }
+    setTimeout(() => {
+      showDelayLoadMessage()
+    }, 7500)
+  </script>
+  <script data-test-id="splash-image-script">
+    const splashImageEl = document.getElementById('splash-image')
+    const qAppEl = document.getElementById('q-app-splash-screen')
+
+    if (splashImageEl && qAppEl && localStorage.splashImageUrl && localStorage.splashBackgroundColor) {
+      splashImageEl.src = localStorage.splashImageUrl
+
+      splashImageEl.onload = function () {
+        if (splashImageEl.naturalWidth > 0 && splashImageEl.naturalHeight > 0) {
+          rendered()
+          return
+        }
+        const interval = setInterval(() => {
+          if (splashImageEl.naturalWidth > 0 && splashImageEl.naturalHeight > 0) {
+            clearInterval(interval);
+            rendered();
+          }
+        }, 5);
+      }
+      function rendered() {
+        qAppEl.style.backgroundColor = localStorage.splashBackgroundColor
+      }
+    }
+  </script>
+  <script type="application/ld+json" data-test-id="schema-org-data">
+    {"@context":"https://schema.org","@type":"MovieTheater","name":"Cinepolis USA | Cinepolis USA","brand":"Cinepolis USA","description":"Check showtimes and buy tickets at your local cinema","address":{"@type":"PostalAddress","addressCountry":"US"},"email":"info@cinepolisusa.com","screenCount":0,"logo":"https://indy-systems.imgix.net/r7rpqaeo7xux2xn79gkzglxh2wv8?w=400&fm=png&auto=format","url":"https://www.cinepolisusa.com/"}
+  </script>
+  <title>Cinepolis USA | Cinepolis USA | Home</title>
+  <link rel="canonical" href="https://www.cinepolisusa.com/home/">
+  <meta charset=utf-8>
+  <meta name="description" content="Check showtimes and buy tickets at your local cinema">
+  <meta property="og:description" content="Check showtimes and buy tickets at your local cinema">
+  <meta name="twitter:description" content="Check showtimes and buy tickets at your local cinema">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+    content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="description" content="Check showtimes and buy tickets at your local cinema"><meta name="twitter:title" content="Home"><meta name="twitter:site" content="@"><meta name="twitter:url" content="https://www.cinepolisusa.com/home"><meta name="twitter:card" content="summary"><meta name="twitter:description" content="Check showtimes and buy tickets at your local cinema"><meta property="og:title" content="Home"><meta property="og:site_name" content="Cinepolis USA"><meta property="og:type" content="website"><meta property="og:url" content="https://www.cinepolisusa.com/home"><meta property="og:description" content="Check showtimes and buy tickets at your local cinema">
+  <link rel=icon type=image/png sizes=128x128
+    href="https://indy-systems.imgix.net/4vgvgqvk2iglf6m9iq62ulx55k96?fm=png&w=128&h=128&fit=fill&fill=solid&auto=format">
+  <link rel=icon type=image/png sizes=96x96
+    href="https://indy-systems.imgix.net/4vgvgqvk2iglf6m9iq62ulx55k96?fm=png&w=96&h=96&fit=fill&fill=solid&auto=format">
+  <link rel=icon type=image/png sizes=32x32
+    href="https://indy-systems.imgix.net/4vgvgqvk2iglf6m9iq62ulx55k96?fm=png&w=32&h=32&fit=fill&fill=solid&auto=format">
+  <link rel=icon type=image/png sizes=16x16
+    href="https://indy-systems.imgix.net/4vgvgqvk2iglf6m9iq62ulx55k96?fm=png&w=16&h=16&fit=fill&fill=solid&auto=format">
+  <link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+  <link href="/fontawesome/css/light.min.css" rel="stylesheet">
+  <link href="/fontawesome/css/solid.min.css" rel="stylesheet">
+  <link href="/fontawesome/css/brands.min.css" rel="stylesheet">
+  <link rel=icon type=image/ico href="https://indy-systems.imgix.net/dob2cenizfxpnjhzqj9a5f9arsg5?fm=png&w=32&h=32&fit=fill&fill=solid&auto=format">
+  <link rel="shortcut icon" href="https://indy-systems.imgix.net/4vgvgqvk2iglf6m9iq62ulx55k96?fm=png&w=128&h=128&fit=fill&fill=solid&auto=format">
+  <link rel=apple-touch-icon
+    href="https://indy-systems.imgix.net/3p5dy0lq9zhakdwrsebn6w0r2bqd?fm=png&w=128&h=128&fit=fill&fill=solid&pad=9&fill-color=1c2c5a&bg=1c2c5a&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?fm=png&w=828&h=1792&fit=fillmax&fill=solid&pad=60&fill-color=ffffff&bg=ffffff&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+    href="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?fm=png&w=1125&h=2436&fit=fillmax&fill=solid&pad=60&fill-color=ffffff&bg=ffffff&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+    href="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?fm=png&w=1242&h=2688&fit=fillmax&fill=solid&pad=60&fill-color=ffffff&bg=ffffff&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?fm=png&w=750&h=1334&fit=fillmax&fill=solid&pad=60&fill-color=1c2c5a&bg=1c2c5a&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
+    href="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?fm=png&w=1242&h=2208&fit=fillmax&fill=solid&pad=60&fill-color=1c2c5a&bg=1c2c5a&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?fm=png&w=640&h=1136&fit=fillmax&fill=solid&pad=60&fill-color=1c2c5a&bg=1c2c5a&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?fm=png&w=1536&h=2048&fit=fillmax&fill=solid&pad=60&fill-color=1c2c5a&bg=1c2c5a&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?fm=png&w=1668&h=2224&fit=fillmax&fill=solid&pad=60&fill-color=1c2c5a&bg=1c2c5a&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?fm=png&w=1668&h=2388&fit=fillmax&fill=solid&pad=60&fill-color=1c2c5a&bg=1c2c5a&auto=format">
+  <link rel=apple-touch-startup-image
+    media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+    href="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?fm=png&w=2048&h=2732&fit=fillmax&fill=solid&pad=60&fill-color=1c2c5a&bg=1c2c5a&auto=format">
+  <link rel=stylesheet href=https://use.typekit.net/hwu0dkh.css>
+  <style>
+    @font-face {
+      font-family: "bebas-neue";
+      src: url("/fonts/BebasNeue-Regular.ttf") format("opentype");
+      font-display: auto;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    body {
+      font-family: brandon-grotesque, sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .text-h1,
+    .text-h2,
+    .text-h3,
+    .text-h4,
+    .text-h5,
+    .text-h6 {
+      font-family: bebas-neue, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    .q-header .menu .q-btn {
+      font-family: bebas-neue, sans-serif;
+      font-size: calc(1em + 0.5vmin);
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+  </style>
+  <link href=/css/ rel=stylesheet>
+  <link href=/css/app.d313a078.css rel=stylesheet>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5MD99HF');</script>
+<!-- End Google Tag Manager -->
+
+<script src="https://movienewsletters.net/referral/live/cinepolisusa.js"></script>
+
+<script>
+ localStorage.setItem("acceptedCookieNotification", "true");
+ // skip INDY legacy prompt
+</script>
+</head>
+
+<body style="background-color: #f7f7f7;">
+  <script> (function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'right', leadColor : '#01528f', triggerColor : '#01528f', triggerRadius : '50%', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'bottom', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 10, triggerOffsetY : 10, triggerRadius : '20' } }); }; h.appendChild(s); })(); </script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MD99HF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div id="q-app">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1000;">
+      <h1>Home</h1><h2>Home Slider DINE-IN</h2><p>Home Slider DINE-IN</p><h2>Desktop - See what&#39;s Playing Carousel</h2><p>Desktop - See what's Playing Carousel
+<a href="https://www.cinepolisusa.com/inglewood/movie/sinners">$5 Sinners</a> - <a href="https://www.cinepolisusa.com/rsm/movie/5-gladiator">$5 Gladiator</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/spirited-away-25th-anniversary---studio-ghibli-fest-dubbed">Spirited Away 25th Anniversary - Studio Ghibli Fest (Dubbed)</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/spirited-away-25th-anniversary---studio-ghibli-fest-subbed">Spirited Away 25th Anniversary - Studio Ghibli Fest (Subbed)</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/the-odyssey">The Odyssey</a> - <a href="https://www.cinepolisusa.com/lacostapaseo/movie/5-300">$5 300</a> - <a href="https://www.cinepolisusa.com/dayton/movie/reagan--directors-cut-with-qa">Reagan- Director&#39;s Cut with Q&amp;A</a> - <a href="https://www.cinepolisusa.com/picorivera/movie/insidious-out-of-the-further">Insidious: Out of the Further</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/resident-evil">Resident Evil</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/avengers-doomsday">Avengers: Doomsday</a> - <a href="https://www.cinepolisusa.com/hamlin/movie/dune-part-three">Dune: Part Three</a> - <a href="https://www.cinepolisusa.com/picorivera/movie/dune-part-three">Dune: Part Three</a> - <a href="https://www.cinepolisusa.com/vista/movie/coyote-vs-acme">Coyote vs Acme</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/mystery-movie-screening-112">Mystery Movie Screening 11/2</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/practical-magic-2">Practical Magic 2</a> - <a href="https://www.cinepolisusa.com/dayton/movie/practical-magic-2">Practical Magic 2</a> - <a href="https://www.cinepolisusa.com/lagunaniguel/movie/six-the-musical-live">SIX: The Musical Live!</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/avengers-doomsday-reald-3d-fan-event">Avengers: Doomsday RealD 3D Fan Event</a> - <a href="https://www.cinepolisusa.com/jupiter/movie/daniel-and-the-fiery-furnace">Daniel and the Fiery Furnace</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/verity">Verity</a> - <a href="https://www.cinepolisusa.com/coconut/movie/dune-part-three-insider-screenings">Dune: Part Three Insider Screenings</a> - <a href="https://www.cinepolisusa.com/inglewood/movie/dune-part-three-insider-screenings">Dune: Part Three Insider Screenings</a> - <a href="https://www.cinepolisusa.com/lacostapaseo/movie/tony">Tony</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/primetime">Primetime</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/primetime">Primetime</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/the-hunger-games-sunrise-on-the-reaping-early-access-screening-event">The Hunger Games: Sunrise on the Reaping Early Access Screening Event</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/avengers-endgame-encore">Avengers: Endgame Encore</a> - <a href="https://www.cinepolisusa.com/vista/movie/avengers-endgame-encore">Avengers: Endgame Encore</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/forgotten-island">Forgotten Island</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/heart-of-the-beast">Heart of the Beast</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/guillermo-del-toros-pans-labyrinth-20th-anniversary">Guillermo del Toro’s Pan’s Labyrinth 20th Anniversary</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-halloween">$5 Halloween</a> - <a href="https://www.cinepolisusa.com/inglewood/movie/if-i-go-will-they-miss-me">If I Go Will They Miss Me</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-carrie">$5 Carrie</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/5-the-thing-2">$5 The Thing</a> - <a href="https://www.cinepolisusa.com/delmar/movie/5-the-thing">$5 The Thing</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/5-it">$5 It</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/5-a-nightmare-on-elm-street">$5 A Nightmare on Elm Street</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/always-lalisa">Always Lalisa</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/sense-and-sensibility---early-access-pj-party-screening">Sense and Sensibility - Early Access PJ Party Screening</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-the-hunger-games-the-ballad-of-songbirds-snakes">$5 The Hunger Games: The Ballad of Songbirds &amp; Snakes</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-the-hunger-games">$5 The Hunger Games</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-the-hunger-games-catching-fire">$5 The Hunger Games: Catching Fire</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-the-hunger-games-mockingjay---part-1">$5 The Hunger Games: Mockingjay - Part 1</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-the-hunger-games-mockingjay---part-2">$5 The Hunger Games: Mockingjay - Part 2</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/the-social-reckoning">The Social Reckoning</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/sense-and-sensibility">Sense and Sensibility</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/other-mommy">Other Mommy</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/digger">Digger</a> - <a href="https://www.cinepolisusa.com/coconut/movie/digger">Digger</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/wildwood">Wildwood</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/wicker">Wicker</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/bts-world-tour-arirang-in-buenos-aires-live-viewing">BTS World Tour &#39;Arirang&#39; In Buenos Aires: Live Viewing</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/bts-world-tour-arirang-in-so-paulo-live-viewing">BTS World Tour &#39;Arirang&#39; in Sao Paulo: Live Viewing</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/street-fighter">Street Fighter</a> - <a href="https://www.cinepolisusa.com/vista/movie/back-to-the-beginning-ozzys-final-bow">Back to the Beginning: Ozzy&#39;s Final Bow</a> - <a href="https://www.cinepolisusa.com/euless/movie/kabaddi-5">Kabaddi 5</a> - <a href="https://www.cinepolisusa.com/jupiter/movie/the-jesus-tapes">The Jesus Tapes</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/whalefall">Whalefall</a> - <a href="https://www.cinepolisusa.com/jupiter/movie/everest-the-other-side">Everest: The Other Side</a> - <a href="https://www.cinepolisusa.com/vista/movie/the-mosquito-bowl">The Mosquito Bowl</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/rocky-50th-anniversary-2">Rocky 50th Anniversary</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/wet-hot-summer-25th-anniversary">Wet Hot Summer 25th Anniversary</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/v-for-vendetta-20th-anniversary">V for Vendetta 20th Anniversary</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/you-can-see-everything">You Can See Everything</a> - <a href="https://www.cinepolisusa.com/coconut/movie/your-mother-your-mother-your-mother">Your Mother Your Mother Your Mother</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/godzilla-minus-zero">Godzilla Minus Zero</a> - <a href="https://www.cinepolisusa.com/inglewood/movie/godzilla-minus-zero---godzilla-day-imax-early-access">Godzilla Minus Zero - Godzilla Day IMAX Early Access</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/klara-and-the-sun">Klara and the Sun</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/clayface">Clayface</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/angel-and-the-badman">Angel and the Badman</a> - <a href="https://www.cinepolisusa.com/woodlands/movie/angel-and-the-badman">Angel and the Badman</a> - <a href="https://www.cinepolisusa.com/dayton/movie/the-beast">The Beast</a> - <a href="https://www.cinepolisusa.com/vista/movie/9-to-5">9 to 5</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/wild-horse-nine-early-access">Wild Horse Nine Early Access</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/ebenezer">Ebenezer</a> - <a href="https://www.cinepolisusa.com/euless/movie/aa-bata-aama-2">Aa Bata Aama 2</a> - <a href="https://www.cinepolisusa.com/jupiter/movie/the-only-living-pickpocket-in-new-york">the Only Living Pickpocket in New York</a> - <a href="https://www.cinepolisusa.com/vista/movie/flywheel-ignition-of-the-soul">Flywheel: Ignition of the Soul</a> - <a href="https://www.cinepolisusa.com/jupiter/movie/the-only-living-pickpocket-in-new-york-2">The Only Living Pickpocket in New York</a> - <a href="https://www.cinepolisusa.com/mckinney/movie/hexed">Hexed</a> - <a href="https://www.cinepolisusa.com/mckinney/movie/the-hunger-games-sunrise-on-the-reaping">The Hunger Games: Sunrise on the Reaping</a> - <a href="https://www.cinepolisusa.com/mckinney/movie/focker-in-law">Focker-In-Law</a> - <a href="https://www.cinepolisusa.com/mckinney/movie/hershey">Hershey</a> - <a href="https://www.cinepolisusa.com/euless/movie/ramayana-rise-of-a-legend-english-language">Ramayana: Rise of a Legend (English Language)</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/scream-30th-anniversary">Scream 30th Anniversary</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/wild-horse-nine">Wild Horse Nine</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/stray-kids-world-tour-run-it-live-viewing">Stray Kids World Tour Run It Live Viewing</a> - <a href="https://www.cinepolisusa.com/dayton/movie/flywheel-ignition-of-the-soul">Flywheel: Ignition of the Soul</a> - <a href="https://www.cinepolisusa.com/vista/movie/trust-me-im-a-doctor">Trust Me I&#39;m a Doctor</a> - <a href="https://www.cinepolisusa.com/dayton/movie/trust-me-im-a-doctor">Trust Me I&#39;m a Doctor</a> - <a href="https://www.cinepolisusa.com/picorivera/movie/you-cant-leave">You Can&#39;t Leave</a> - <a href="https://www.cinepolisusa.com/vista/movie/ken-russells-the-devils">Ken Russell&#39;s The Devils</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/the-cat-in-the-hat">The Cat in the Hat</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/ghost-soldier">Ghost Soldier</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/ramayana-hindi-with-english-subtitles">Ramayana (Hindi with English Subtitles)</a></p><h2>Mobile - See what&#39;s Playing Carousel</h2><p>Mobile - See what's Playing Carousel
+<a href="https://www.cinepolisusa.com/inglewood/movie/sinners">$5 Sinners</a> - <a href="https://www.cinepolisusa.com/rsm/movie/5-gladiator">$5 Gladiator</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/spirited-away-25th-anniversary---studio-ghibli-fest-dubbed">Spirited Away 25th Anniversary - Studio Ghibli Fest (Dubbed)</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/spirited-away-25th-anniversary---studio-ghibli-fest-subbed">Spirited Away 25th Anniversary - Studio Ghibli Fest (Subbed)</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/the-odyssey">The Odyssey</a> - <a href="https://www.cinepolisusa.com/lacostapaseo/movie/5-300">$5 300</a> - <a href="https://www.cinepolisusa.com/dayton/movie/reagan--directors-cut-with-qa">Reagan- Director&#39;s Cut with Q&amp;A</a> - <a href="https://www.cinepolisusa.com/picorivera/movie/insidious-out-of-the-further">Insidious: Out of the Further</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/resident-evil">Resident Evil</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/avengers-doomsday">Avengers: Doomsday</a> - <a href="https://www.cinepolisusa.com/hamlin/movie/dune-part-three">Dune: Part Three</a> - <a href="https://www.cinepolisusa.com/picorivera/movie/dune-part-three">Dune: Part Three</a> - <a href="https://www.cinepolisusa.com/vista/movie/coyote-vs-acme">Coyote vs Acme</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/mystery-movie-screening-112">Mystery Movie Screening 11/2</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/practical-magic-2">Practical Magic 2</a> - <a href="https://www.cinepolisusa.com/dayton/movie/practical-magic-2">Practical Magic 2</a> - <a href="https://www.cinepolisusa.com/lagunaniguel/movie/six-the-musical-live">SIX: The Musical Live!</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/avengers-doomsday-reald-3d-fan-event">Avengers: Doomsday RealD 3D Fan Event</a> - <a href="https://www.cinepolisusa.com/jupiter/movie/daniel-and-the-fiery-furnace">Daniel and the Fiery Furnace</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/verity">Verity</a> - <a href="https://www.cinepolisusa.com/coconut/movie/dune-part-three-insider-screenings">Dune: Part Three Insider Screenings</a> - <a href="https://www.cinepolisusa.com/inglewood/movie/dune-part-three-insider-screenings">Dune: Part Three Insider Screenings</a> - <a href="https://www.cinepolisusa.com/lacostapaseo/movie/tony">Tony</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/primetime">Primetime</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/primetime">Primetime</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/the-hunger-games-sunrise-on-the-reaping-early-access-screening-event">The Hunger Games: Sunrise on the Reaping Early Access Screening Event</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/avengers-endgame-encore">Avengers: Endgame Encore</a> - <a href="https://www.cinepolisusa.com/vista/movie/avengers-endgame-encore">Avengers: Endgame Encore</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/forgotten-island">Forgotten Island</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/heart-of-the-beast">Heart of the Beast</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/guillermo-del-toros-pans-labyrinth-20th-anniversary">Guillermo del Toro’s Pan’s Labyrinth 20th Anniversary</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-halloween">$5 Halloween</a> - <a href="https://www.cinepolisusa.com/inglewood/movie/if-i-go-will-they-miss-me">If I Go Will They Miss Me</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-carrie">$5 Carrie</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/5-the-thing-2">$5 The Thing</a> - <a href="https://www.cinepolisusa.com/delmar/movie/5-the-thing">$5 The Thing</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/5-it">$5 It</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/5-a-nightmare-on-elm-street">$5 A Nightmare on Elm Street</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/always-lalisa">Always Lalisa</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/sense-and-sensibility---early-access-pj-party-screening">Sense and Sensibility - Early Access PJ Party Screening</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-the-hunger-games-the-ballad-of-songbirds-snakes">$5 The Hunger Games: The Ballad of Songbirds &amp; Snakes</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-the-hunger-games">$5 The Hunger Games</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-the-hunger-games-catching-fire">$5 The Hunger Games: Catching Fire</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-the-hunger-games-mockingjay---part-1">$5 The Hunger Games: Mockingjay - Part 1</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/5-the-hunger-games-mockingjay---part-2">$5 The Hunger Games: Mockingjay - Part 2</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/the-social-reckoning">The Social Reckoning</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/sense-and-sensibility">Sense and Sensibility</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/other-mommy">Other Mommy</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/digger">Digger</a> - <a href="https://www.cinepolisusa.com/coconut/movie/digger">Digger</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/wildwood">Wildwood</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/wicker">Wicker</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/bts-world-tour-arirang-in-buenos-aires-live-viewing">BTS World Tour &#39;Arirang&#39; In Buenos Aires: Live Viewing</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/bts-world-tour-arirang-in-so-paulo-live-viewing">BTS World Tour &#39;Arirang&#39; in Sao Paulo: Live Viewing</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/street-fighter">Street Fighter</a> - <a href="https://www.cinepolisusa.com/vista/movie/back-to-the-beginning-ozzys-final-bow">Back to the Beginning: Ozzy&#39;s Final Bow</a> - <a href="https://www.cinepolisusa.com/euless/movie/kabaddi-5">Kabaddi 5</a> - <a href="https://www.cinepolisusa.com/jupiter/movie/the-jesus-tapes">The Jesus Tapes</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/whalefall">Whalefall</a> - <a href="https://www.cinepolisusa.com/jupiter/movie/everest-the-other-side">Everest: The Other Side</a> - <a href="https://www.cinepolisusa.com/vista/movie/the-mosquito-bowl">The Mosquito Bowl</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/rocky-50th-anniversary-2">Rocky 50th Anniversary</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/wet-hot-summer-25th-anniversary">Wet Hot Summer 25th Anniversary</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/v-for-vendetta-20th-anniversary">V for Vendetta 20th Anniversary</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/you-can-see-everything">You Can See Everything</a> - <a href="https://www.cinepolisusa.com/coconut/movie/your-mother-your-mother-your-mother">Your Mother Your Mother Your Mother</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/godzilla-minus-zero">Godzilla Minus Zero</a> - <a href="https://www.cinepolisusa.com/inglewood/movie/godzilla-minus-zero---godzilla-day-imax-early-access">Godzilla Minus Zero - Godzilla Day IMAX Early Access</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/klara-and-the-sun">Klara and the Sun</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/clayface">Clayface</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/angel-and-the-badman">Angel and the Badman</a> - <a href="https://www.cinepolisusa.com/woodlands/movie/angel-and-the-badman">Angel and the Badman</a> - <a href="https://www.cinepolisusa.com/dayton/movie/the-beast">The Beast</a> - <a href="https://www.cinepolisusa.com/vista/movie/9-to-5">9 to 5</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/wild-horse-nine-early-access">Wild Horse Nine Early Access</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/ebenezer">Ebenezer</a> - <a href="https://www.cinepolisusa.com/euless/movie/aa-bata-aama-2">Aa Bata Aama 2</a> - <a href="https://www.cinepolisusa.com/jupiter/movie/the-only-living-pickpocket-in-new-york">the Only Living Pickpocket in New York</a> - <a href="https://www.cinepolisusa.com/vista/movie/flywheel-ignition-of-the-soul">Flywheel: Ignition of the Soul</a> - <a href="https://www.cinepolisusa.com/jupiter/movie/the-only-living-pickpocket-in-new-york-2">The Only Living Pickpocket in New York</a> - <a href="https://www.cinepolisusa.com/mckinney/movie/hexed">Hexed</a> - <a href="https://www.cinepolisusa.com/mckinney/movie/the-hunger-games-sunrise-on-the-reaping">The Hunger Games: Sunrise on the Reaping</a> - <a href="https://www.cinepolisusa.com/mckinney/movie/focker-in-law">Focker-In-Law</a> - <a href="https://www.cinepolisusa.com/mckinney/movie/hershey">Hershey</a> - <a href="https://www.cinepolisusa.com/euless/movie/ramayana-rise-of-a-legend-english-language">Ramayana: Rise of a Legend (English Language)</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/scream-30th-anniversary">Scream 30th Anniversary</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/wild-horse-nine">Wild Horse Nine</a> - <a href="https://www.cinepolisusa.com/san-mateo/movie/stray-kids-world-tour-run-it-live-viewing">Stray Kids World Tour Run It Live Viewing</a> - <a href="https://www.cinepolisusa.com/dayton/movie/flywheel-ignition-of-the-soul">Flywheel: Ignition of the Soul</a> - <a href="https://www.cinepolisusa.com/vista/movie/trust-me-im-a-doctor">Trust Me I&#39;m a Doctor</a> - <a href="https://www.cinepolisusa.com/dayton/movie/trust-me-im-a-doctor">Trust Me I&#39;m a Doctor</a> - <a href="https://www.cinepolisusa.com/picorivera/movie/you-cant-leave">You Can&#39;t Leave</a> - <a href="https://www.cinepolisusa.com/vista/movie/ken-russells-the-devils">Ken Russell&#39;s The Devils</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/the-cat-in-the-hat">The Cat in the Hat</a> - <a href="https://www.cinepolisusa.com/nwaustin/movie/ghost-soldier">Ghost Soldier</a> - <a href="https://www.cinepolisusa.com/swaustin/movie/ramayana-hindi-with-english-subtitles">Ramayana (Hindi with English Subtitles)</a></p><h2>See all Movies Playing Button</h2><p><body><div class="row justify-center items-center"><div class="col-12 q-pa-sm text-center"><div><a href="/all-movies" class="q-btn non-selectable no-outline q-btn--unelevated q-btn--rectangle q-btn--rounded bg-secondary text-white q-btn--actionable q-focusable q-hoverable q-btn--wrap q-btn--active q-px-md"><span class="q-focus-helper"></span><span class="q-btn__wrapper col row q-anchor--skip"><span class="q-btn__content text-center col items-center q-anchor--skip justify-center row"><span class="button-label">
+ See all Movies Playing
+ </span></span></span></a></div></div></div><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"ef092cb5f7104a98a905d2dc77b67fc7","spa":2}' crossorigin="anonymous"></script>
+</body></p><h2>Current Promotions:</h2><p>Current Promotions:
+<a href="https://www.cinepolisusa.com/circuit-promotions/">Daily Deals - </a> | <a href="https://www.cinepolisusa.com/register">Cinépolis Rewards - </a> | <a href="https://www.cinepolisusa.com/cinepolis-handpicked">Cinépolis Handpicked - </a> | <a href="https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Forder.online%2Fbusiness-group%2F~10843007&data=05%7C02%7Cmalquicira%40cinepolis.com%7Cda04644ba3f64b01575008defa47d9d4%7Cd95b842837294ecda6f3beee9ba8c6cb%7C0%7C0%7C639223383723516575%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=ZpPI3GAUPUREHb3mbSwNyT9BH%2BMpW15JZemV14BW9U8%3D&reserved=0">DoorDash x Cinepolis - </a> | <a href="https://www.cinepolisusa.com/mystery-movie">Mystery Movie- October 5 - Available at Select Location</a></p><h2>Marketing Signup</h2><p>Marketing Signup</p><h2>Home Slider-Counter</h2><p>Home Slider-Counter</p>
+    </div>
+    <div
+      id="q-app-splash-screen"
+      class="q-app-splash-screen"
+      style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #ffffff;">
+      <div style="height: 100%; width: 100%;">
+        <div style="text-align: center;">
+          <div
+            style="width: 90%; max-width: 600px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <img alt="Showtimes, Tickets and More"
+              src="https://indy-systems.imgix.net/ls86hlpvbqqrz58mmi52nwv8zqap?w=1200&auto=format"
+              style="width: 100%" id="splash-image">
+          </div>
+        </div>
+        <div id="indy-load-delay-message"
+          style="position: absolute; bottom: 30px; left: 0; right: 0; text-align: center; display: none;">
+          <span
+            style="padding: 10px 20px; background-color: #00000066; color: white; font-size: large; font-weight: bold; border-radius: 10px;">
+            Loading...
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src=/js/vendor.6c076fef.js></script>
+  <script src=/js/app.0da2688e.js></script>
+</body>
+</html>
