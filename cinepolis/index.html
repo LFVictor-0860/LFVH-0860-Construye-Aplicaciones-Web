@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explora Cinépolis México y encuentra tu cine en el estado de Chihuahua." />
+  <title>Cinépolis México | Chihuahua</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-strip"><span>LA EXPERIENCIA DE CINE QUE TE ENCANTA</span><span class="top-right">CINÉPOLIS MÉXICO</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Inicio de Cinépolis México"><img src="assets/cinepolis-logo.svg" alt="Cinépolis" /></a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menú">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#movies">PELÍCULAS</a><a href="#promotions">PROMOCIONES</a><a href="#rewards">RECOMPENSAS CINÉPOLIS</a><a href="#about">NOSOTROS</a>
+    </nav>
+    <div class="header-actions"><button class="location-button" id="locationButton">⌖ <span id="locationLabel">ELIGE TU CINE</span></button><a class="account-link" href="#movies">CARTELERA MX</a></div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-label="La experiencia Cinépolis">
+      <div class="hero-shade"></div>
+      <div class="hero-content"><p class="eyebrow">TU NOCHE DE CINE COMIENZA AQUÍ</p><h1>HORARIOS,<br><em>BOLETOS Y MÁS</em></h1><p>Encuentra tu cine en Chihuahua, revisa la cartelera y prepara tu próxima visita.</p>
+        <form class="showtime-form" id="showtimeForm"><label class="sr-only" for="heroLocation">Elige una ubicación</label><select id="heroLocation"><option value="">Selecciona un Cinépolis de Chihuahua</option><optgroup label="Chihuahua capital"><option value="Cinépolis Fashion Mall — Chihuahua">Cinépolis Fashion Mall</option><option value="Cinépolis Paseo Central — Chihuahua">Cinépolis Paseo Central</option><option value="Cinépolis Chihuahua Av. Vallarta — Chihuahua">Cinépolis Av. Vallarta</option><option value="Cinépolis Sendero Jabil — Chihuahua">Cinépolis Sendero Jabil</option><option value="Cinépolis Paseo Nueva España — Chihuahua">Cinépolis Paseo Nueva España</option></optgroup><optgroup label="Ciudad Juárez"><option value="Cinépolis Las Misiones — Ciudad Juárez">Cinépolis Las Misiones</option><option value="Cinépolis Las Américas — Ciudad Juárez">Cinépolis Las Américas</option><option value="Cinépolis Gran Patio Zaragoza — Ciudad Juárez">Cinépolis Gran Patio Zaragoza</option><option value="Cinépolis Sendero Ciudad Juárez — Ciudad Juárez">Cinépolis Sendero Ciudad Juárez</option><option value="Cinépolis Plaza Sendero Las Torres — Ciudad Juárez">Cinépolis Plaza Sendero Las Torres</option><option value="Cinépolis Pinocelli — Ciudad Juárez">Cinépolis Pinocelli</option><option value="Cinépolis Juárez Centro Mall — Ciudad Juárez">Cinépolis Juárez Centro Mall</option></optgroup><optgroup label="Otros municipios"><option value="Cinépolis Cuauhtémoc — Cuauhtémoc">Cinépolis Cuauhtémoc</option><option value="Cinépolis Delicias — Delicias">Cinépolis Delicias</option><option value="Cinépolis Plaza Camargo — Camargo">Cinépolis Plaza Camargo</option><option value="Cinépolis Escala Parral — Hidalgo del Parral">Cinépolis Escala Parral</option><option value="Cinépolis Jiménez — Jiménez">Cinépolis Jiménez</option></optgroup></select><button type="submit">VER HORARIOS <span>→</span></button></form>
+      </div>
+      <div class="hero-dots"><span class="active"></span><span></span><span></span></div>
+    </section>
+
+    <section class="movies-section section-wrap" id="movies">
+      <div class="section-heading"><div><p class="eyebrow dark-eyebrow">EN CARTELERA Y PRÓXIMAMENTE</p><h2>DESCUBRE QUÉ ESTÁ EN CARTELERA</h2></div><div class="movie-tools"><label class="search-box"><span>⌕</span><input id="movieSearch" type="search" placeholder="Buscar películas" aria-label="Buscar películas" /></label><a class="text-link" href="#movies">VER TODAS LAS PELÍCULAS ↓</a></div></div>
+      <div class="filter-row"><button class="filter active" data-filter="all">TODAS</button><button class="filter" data-filter="deals">ESTRENOS</button><button class="filter" data-filter="upcoming">PRÓXIMAMENTE</button><span id="resultCount" class="result-count"></span></div>
+      <p class="local-note">La información de películas, sinopsis y pósteres se consulta desde TMDB. Los horarios y la disponibilidad de cada complejo de Cinépolis no están conectados.</p><div class="movie-grid" id="movieGrid"><div class="loading">Cargando películas...</div></div>
+      <div class="center"><a class="outline-button" href="#movies">VOLVER A LA CARTELERA</a></div>
+    </section>
+
+    <section class="promotions-section" id="promotions"><div class="section-wrap"><div class="section-heading light-heading"><div><p class="eyebrow">MÁS FORMAS DE DISFRUTAR EL CINE</p><h2>PROMOCIONES ACTUALES</h2></div><div class="promo-controls"><button id="promoPrev" aria-label="Promoción anterior">←</button><button id="promoNext" aria-label="Siguiente promoción">→</button></div></div><div class="promo-grid" id="promoGrid"></div></div></section>
+
+    <section class="rewards-section section-wrap" id="rewards"><div class="rewards-copy"><p class="eyebrow dark-eyebrow">BUENAS PELÍCULAS. GRANDES RECOMPENSAS.</p><h2>HAZ QUE CADA<br>PELÍCULA CUENTE.</h2><p>Descubre beneficios, promociones y experiencias para disfrutar más cada visita a Cinépolis México.</p><a class="solid-button" href="#promotions">VER PROMOCIONES <span>→</span></a></div><div class="rewards-art"><div class="ticket ticket-back"></div><div class="ticket ticket-front"><span class="ticket-logo">CINÉPOLIS</span><span class="ticket-star">✦</span><span class="ticket-text">TU PRÓXIMA<br>NOCHE DE CINE</span><span class="ticket-small">MIEMBRO DE RECOMPENSAS</span></div></div></section>
+
+    <section class="newsletter-section"><div class="section-wrap newsletter-inner"><div><p class="eyebrow">NO TE PIERDAS NADA</p><h2>ENTÉRATE DE LO MÁS NUEVO DEL CINE EN MÉXICO</h2><p>Déjanos tu correo para probar el formulario de esta página. Para horarios y disponibilidad, consulta el sitio oficial.</p></div><form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="emailInput">Correo electrónico</label><input id="emailInput" type="email" placeholder="Escribe tu correo electrónico" required /><button type="submit">QUIERO SUSCRIBIRME →</button><p id="newsletterMessage" aria-live="polite"></p></form></div></section>
+  </main>
+
+  <footer class="site-footer" id="about"><div class="footer-top"><a class="footer-brand" href="#home"><img src="assets/cinepolis-logo.svg" alt="Cinépolis" /></a><div class="footer-links"><a href="#movies">Películas</a><a href="#promotions">Promociones</a><a href="#rewards">Recompensas</a><a href="#newsletterForm">Contacto</a></div><div class="socials"><a href="#about" aria-label="Instagram">◎</a><a href="#about" aria-label="Facebook">f</a><a href="#about" aria-label="YouTube">▶</a></div></div><div class="footer-bottom"><span>© 2026 RECREACIÓN ESCOLAR. INFORMACIÓN DE PELÍCULAS: TMDB.</span><div><a href="#about" data-local-info="privacidad">PRIVACIDAD</a><a href="#about" data-local-info="términos">TÉRMINOS</a><a href="https://www.themoviedb.org/" target="_blank" rel="noreferrer">TMDB</a><a href="#home">VOLVER ARRIBA ↑</a></div></div><div class="tmdb-attribution" style="padding:0 0 18px;font-size:11px;color:#aab2c5;line-height:1.5">Este producto utiliza la API de TMDB, pero no está respaldado ni certificado por TMDB. La cartelera de películas no representa horarios oficiales de Cinépolis.</div></footer>
+  <section class="local-modal" id="localModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel"><button class="modal-close" id="modalClose" aria-label="Cerrar ventana">×</button><p class="eyebrow dark-eyebrow">CINÉPOLIS · CHIHUAHUA</p><h2 id="modalTitle">Tu próxima función</h2><div id="modalContent"></div><button class="solid-button modal-action" id="modalAction">ENTENDIDO</button></div>
+  </section>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
