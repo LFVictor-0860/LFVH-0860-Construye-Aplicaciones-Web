@@ -1,0 +1,196 @@
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinepolis Chihuahua</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado y navegacion -->
+    <header class="site-header" id="inicio">
+        <a class="brand" href="#inicio">
+            <img src="assets/cinepolis-logo.svg" alt="Cinepolis">
+            <span>CHIHUAHUA</span>
+        </a>
+
+        <nav class="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#cartelera">En cartelera</a>
+            <a href="#estrenos">Proximos estrenos</a>
+            <a href="#club">Cinepolis Club</a>
+            <a href="#cuenta">Iniciar sesion / Registro</a>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Inicio -->
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">CINEPOLIS CHIHUAHUA</p>
+                <h1>Vive la experiencia del cine</h1>
+                <p>Consulta las peliculas en cartelera y conoce los proximos estrenos.</p>
+                <a class="button button-red" href="#cartelera">Ver peliculas</a>
+            </div>
+
+            <div class="hero-image"></div>
+        </section>
+
+        <!-- Peliculas en cartelera -->
+        <section class="content-section" id="cartelera">
+            <div class="section-heading">
+                <p class="eyebrow">PELICULAS DISPONIBLES</p>
+                <h2>En cartelera</h2>
+            </div>
+
+            <div class="movie-grid">
+                <article class="movie-card">
+                    <img src="https://image.tmdb.org/t/p/w500/ntmaNFJ7O60n45E1E6HZlXeSV5e.jpg" alt="Poster de Resident Evil">
+                    <div class="movie-info">
+                        <span class="tag">Terror</span>
+                        <h3>Resident Evil: Noche cero</h3>
+                        <p>Accion · Ciencia ficcion</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <img src="https://image.tmdb.org/t/p/w500/xQlESgkDM7rczAWySdB0WBomh39.jpg" alt="Poster de Vertigo">
+                    <div class="movie-info">
+                        <span class="tag">Estreno</span>
+                        <h3>Vertigo 2: Punto muerto</h3>
+                        <p>Suspenso</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <img src="https://image.tmdb.org/t/p/w500/hHPIefotew38oJm3YCJPAzpi26c.jpg" alt="Poster de Hope">
+                    <div class="movie-info">
+                        <span class="tag">Ciencia ficcion</span>
+                        <h3>Hope: El primer impacto</h3>
+                        <p>Misterio · Ciencia ficcion</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Proximos estrenos -->
+        <section class="content-section section-muted" id="estrenos">
+            <div class="section-heading">
+                <p class="eyebrow">PROXIMAMENTE</p>
+                <h2>Proximos estrenos</h2>
+            </div>
+
+            <div class="movie-grid">
+                <article class="movie-card">
+                    <img src="https://image.tmdb.org/t/p/w500/5yUwsjgWlYCIF5ck1NaUr5zEGg7.jpg" alt="Poster de Madre siniestra">
+                    <div class="movie-info">
+                        <span class="tag tag-blue">Proximamente</span>
+                        <h3>Madre siniestra</h3>
+                        <p>Terror</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <img src="https://image.tmdb.org/t/p/w500/eNdtnb2Ga4H9fl4hEGhOLrgdKqq.jpg" alt="Poster de Hechizo de amor">
+                    <div class="movie-info">
+                        <span class="tag tag-blue">Proximamente</span>
+                        <h3>Hechizo de amor</h3>
+                        <p>Romance · Fantasia</p>
+                    </div>
+                </article>
+
+                <article class="movie-card">
+                    <img src="https://image.tmdb.org/t/p/w500/7NpaoOzGDRKJ53znEucFpF2IszT.jpg" alt="Poster de Pinocho">
+                    <div class="movie-info">
+                        <span class="tag tag-blue">Proximamente</span>
+                        <h3>Pinocho: Sin cuerdas</h3>
+                        <p>Fantasia · Terror</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Inicio de sesion y registro -->
+        <section class="content-section account-section" id="cuenta">
+            <p class="eyebrow">TU CUENTA</p>
+            <h2>Iniciar sesion o registrarte</h2>
+
+            <div class="forms-grid">
+
+                <form class="form-card">
+                    <h3>Iniciar sesion</h3>
+
+                    <label for="login-email">Correo electronico</label>
+                    <input type="email" id="login-email" placeholder="Tu correo">
+
+                    <label for="login-password">Contrasena</label>
+                    <input type="password" id="login-password" placeholder="Tu contrasena">
+
+                    <button class="button button-red" type="button">Iniciar sesion</button>
+                    <p class="form-help">Formulario de ejemplo.</p>
+                </form>
+
+                <form class="form-card">
+                    <h3>Crear cuenta</h3>
+
+                    <label for="register-name">Nombre</label>
+                    <input type="text" id="register-name" placeholder="Tu nombre">
+
+                    <label for="register-email">Correo electronico</label>
+                    <input type="email" id="register-email" placeholder="Tu correo">
+
+                    <label for="register-password">Contrasena</label>
+                    <input type="password" id="register-password" placeholder="Crea una contrasena">
+
+                    <button class="button button-blue" type="button">Registrarme</button>
+                    <p class="form-help">Formulario de ejemplo.</p>
+                </form>
+
+            </div>
+        </section>
+
+        <!-- Cinepolis Club -->
+        <section class="content-section club-section" id="club">
+            <div class="club-copy">
+                <p class="eyebrow">BENEFICIOS PARA TI</p>
+                <h2>Cinepolis Club</h2>
+                <p>Ingresa el numero de tu tarjeta para consultar esta opcion.</p>
+            </div>
+
+            <form class="club-form">
+                <label for="club-card">Numero de tarjeta</label>
+                <input type="text" id="club-card" placeholder="Numero de tarjeta">
+
+                <button class="button button-red" type="button">Continuar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Pie de pagina -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <a class="footer-brand" href="#inicio">
+                <img src="assets/cinepolis-logo.svg" alt="Cinepolis">
+                <span>CHIHUAHUA</span>
+            </a>
+
+            <nav class="footer-nav">
+                <a href="#cartelera">En cartelera</a>
+                <a href="#estrenos">Proximos estrenos</a>
+                <a href="#club">Cinepolis Club</a>
+                <a href="#cuenta">Mi cuenta</a>
+            </nav>
+        </div>
+
+        <p class="footer-note">Proyecto escolar · Cinepolis Chihuahua · 2026</p>
+    </footer>
+
+</body>
+</html>
+```
